@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACHIEVERS UNIVERSITY EXEAT MANAGEMENT SYSTEM | SYSTEM</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../../assets/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="/assets/school.png" type="image/png">
+</head>
+
+<body class="text-center">
+<!-- 
+    <div class="containe mt-4">
+        <div class="row align-items-center justify-content-center text-dark" style="min-height:100vh;">
+            <div class="col-md-6 col-lg-4 col-sm-8"> -->
+
+                <div class="container mt-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-4 col-sm-8"> 
+
+               <a href="index.html">
+
+               <img src="assets/school.png" class="text-center" width="100">  
+            </a>
+                <h4 class="text-dark text-center text-uppercase fw-bold">ACHIEVERS UNIVERSITY EXEAT MANAGEMENT SYSTEM</h4>
+                <h4 class="text-dark text-center text-uppercase">Fill in your Details in the Field Below</h4>
+
+                <form method="POST" enctype="application/x-www-form-urlencoded" action="index.php" class="text-center my-3 p-4 rounded border border-success"
+                    accept-charset="UTF-8" autocomplete="off">
+
+                    <div class="form-group text-left">
+                        <label class="text-left" for="fullname">Full Name</label>
+                        <input type="text" class="form-control" name="fullname" id="fullname"
+                            placeholder="Enter your fullname">
+                    </div>
+
+                    
+
+                    <div class="form-group text-left ">
+                        <label for="email">Email Address</label>
+                        <input type="text" class="form-control" onBlur="userAvailability()" name="Email" id="email"
+                            placeholder="email@example.com">
+                        <span id="user-availability-status1" style="font-size:12px;color:red;float:left;"></span>
+                    </div><br>
+
+                    <div class="form-group text-left">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="text" class="form-control" name="mobile_number" id="mobile"
+                            placeholder="+2348086976247">
+                    </div>
+
+                    <div class="form-group text-left">
+                        <label for="matric">Matric Number</label>
+                        <input type="text" class="form-control" name="matric_number" id="matric"
+                            placeholder="AU24CC5099">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender" class="control-label text-center">Gender</label>
+                        <select class="form-control" name="gender" id="gender">
+                            <option value="" selected="selected">- Select -</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female </option>
+                            <option value="I'd rather not say">I'd rather not say</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="level" class="control-label text-center">Level</label>
+                        <select class="form-control" name="level" id="level">
+                            <option value="" selected="selected">- Select -</option>
+                            <option value="100">100</option>
+                            <option value="200">200</option>
+                            <option value="300">300</option>
+                            <option value="400">400</option>
+                            <option value="500">500</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group text-left">
+                        <label for="course">Course of Study</label>
+                        <input type="text" class="form-control" name="course" id="course"
+                            placeholder="Computer Science">
+                    </div>
+
+
+                    <div class="form-group text-left">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" class="form-control" name="dob" id="dob">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="religion" class="control-label text-center">Religion</label>
+                        <select class="form-control" name="religion" id="religion">
+                            <option value="" selected="selected">- Select -</option>
+                            <option value="Christian">Christian</option>
+                            <option value="Muslim">Muslim</option>
+                            <option value="Traditionalist">Traditionalist</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="state" class="control-label text-center">State of Origin </label>
+                        <select class="form-control" onchange="toggleLGA(this);" name="state" id="state">
+                            <option value="" selected="selected">- Select -</option>
+                            <option value="Abia">Abia</option>
+                            <option value="Adamawa">Adamawa</option>
+                            <option value="AkwaIbom">AkwaIbom</option>
+                            <option value="Anambra">Anambra</option>
+                            <option value="Bauchi">Bauchi</option>
+                            <option value="Bayelsa">Bayelsa</option>
+                            <option value="Benue">Benue</option>
+                            <option value="Borno">Borno</option>
+                            <option value="Cross River">Cross River</option>
+                            <option value="Delta">Delta</option>
+                            <option value="Ebonyi">Ebonyi</option>
+                            <option value="Edo">Edo</option>
+                            <option value="Ekiti">Ekiti</option>
+                            <option value="Enugu">Enugu</option>
+                            <option value="FCT">FCT</option>
+                            <option value="Gombe">Gombe</option>
+                            <option value="Imo">Imo</option>
+                            <option value="Jigawa">Jigawa</option>
+                            <option value="Kaduna">Kaduna</option>
+                            <option value="Kano">Kano</option>
+                            <option value="Katsina">Katsina</option>
+                            <option value="Kebbi">Kebbi</option>
+                            <option value="Kogi">Kogi</option>
+                            <option value="Kwara">Kwara</option>
+                            <option value="Lagos">Lagos</option>
+                            <option value="Nasarawa">Nasarawa</option>
+                            <option value="Niger">Niger</option>
+                            <option value="Ogun">Ogun</option>
+                            <option value="Ondo">Ondo</option>
+                            <option value="Osun">Osun</option>
+                            <option value="Oyo">Oyo</option>
+                            <option value="Plateau">Plateau</option>
+                            <option value="Rivers">Rivers</option>
+                            <option value="Sokoto">Sokoto</option>
+                            <option value="Taraba">Taraba</option>
+                            <option value="Yobe">Yobe</option>
+                            <option value="Zamfara">Zamafara</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lga">LGA of Origin</label>
+                        <select name="lga" id="lga" class="form-control select-lga" required></select>
+                    </div>
+
+                    <div class="form-group text-left">
+                        <label for="address">House Address</label>
+                        <input type="text" class="form-control" name="address" id="address"
+                            placeholder="No 3,Lekki Villa,Lagos">
+                    </div>
+
+
+                    <div class="form-group text-left">
+                        <label for="Password">Password</label>
+                        <input type="password" class="form-control" onBlur="checkPasswordLength();" name="password" id="Password"
+                            placeholder="1234#2023_5happyboys">
+                             <span id="user-password" style="font-size:12px;color:red;float:left;"></span>
+                    </div>
+                    	<script type="text/javascript">
+
+                    		function lock(){
+    $('#submit').prop('disabled',true);
+}
+                    		function unlock(){
+    $('#submit').prop('disabled',false);
+}
+                   		function checkPasswordLength() {
+    password = document.getElementById('Password');
+      out = document.getElementById('user-password');
+    if(password.value.length <6){
+	out.style.color = "red";
+        out.innerHTML="Please enter at least 6 characters";
+        lock();
+}else if(password.value.length>=6){
+	out.style.color = "green";
+         out.innerHTML="Cool! Make sure it is something you also remember!";
+         unlock();
+    }
+}
+                    	</script>
+                    <div class="col-6 text-left">
+                        <p id="checkpassword"><input type="checkbox" id="checkPwd" onclick="showPassword()"> Show
+                            Password </p>
+                    </div>
+
+
+                    <button class="w-100 btn btn-lg btn-primary" type="submit" id="submit" name="submit">Submit
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </button>
+
+
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="form-actions">
+        <p>
+            Already have an account?
+            <a style="text-decoration: none;" class="btn btn-success" href="../login/login.html">
+                LogIn <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </p>
+        <p>
+            I forgot my password
+            <a style="text-decoration: none;" class="btn btn-primary" href="password_reset.html">
+                Reset Here...<i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </p>
+
+    </div>
+    <footer class="row mt-5 align-items-center justify-content-center">
+        <div class="col-12">
+            <p class="text-center">
+                Made with <span class="fa fa-heart text-danger"> </span>
+                by <a href="https://github.com/CodeMonkey202" class="text-dark">TejCodes</a>
+            </p>
+            <p class="mt-5 mb-3 text-muted">&copy;<span id="year"></span> AUOHC.All rights reserved</p>
+        </div>
+    </footer>
+</body>
+
+
+<!-- <script src="assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+<script src="assets/lga.js"></script>
+<script src="assets/lga.min.js"></script>
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/vendor/modernizr/modernizr.js"></script>
+<script src="assets/vendor/jquery-cookie/jquery.cookie.js"></script>
+<script src="assets/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="assets/vendor/jquery-validation/jquery.validate.js"></script>
+<script src="assets/vendor/jquery-validation/jquery.validate.min.js"></script>
+<script src="assets/vendor/switchery/switchery.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/login.js"></script> -->
+
+<script>
+jQuery(document).ready(function() {
+    Main.init();
+    Login.init();
+});
+</script>
+
+<script>
+function userAvailability() {
+    $("#loaderIcon").show();
+    jQuery.ajax({
+        url: "check_availability.php",
+        data: 'Email=' + $("#email").val(),
+        type: "POST",
+        success: function(data) {
+            $("#user-availability-status1").html(data);
+            $("#loaderIcon").hide();
+        },
+        error: function() {}
+    });
+}
+</script>
+
+<!-- get the year and load it out  -->
+<script type="text/javascript">
+let password = document.getElementById("Password");
+
+function showPassword() {
+    if (password.type === "password") {
+        password.type = "text";
+    } else {
+        password.type = "password"
+    }
+}
+// Get the year
+let year = document.getElementById("year");
+let dateYear = new Date().getFullYear();
+year.innerHTML = dateYear;
+
+
+
+
+</script>
+
+
+
+</html>
